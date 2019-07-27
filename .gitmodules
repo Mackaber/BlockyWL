@@ -1,6 +1,6 @@
-[submodule "client/scratch-gui/"]
+[submodule "client/scratch-gui"]
     path = client/scratch-gui/
     url = git@github.com:Mackaber/scratch-gui.git
-[submodule "client/scratch-vm/"]
+[submodule "client/scratch-vm"]
     path = client/scratch-vm/
     url = git@github.com:Mackaber/scratch-vm.git
