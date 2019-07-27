@@ -1,0 +1,20 @@
+{
+  "name": "blockywl",
+  "version": "0.0.1",
+  "description": "An Interface for the Wolfram Language",
+  "main": "none",
+  "scripts": {
+    "start": "concurrently 'npm:wl-*'",
+    "postinstall": "./postinstall.sh",
+    "wl-sever-start": "wolframwebengine server/app.wl",
+    "wl-scratch-start": "cd client/scratch-gui/ && npm start"
+  },
+  "keywords": [
+    "blocky"
+  ],
+  "author": "Mackaber",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.1"
+  },
+}
