@@ -1,6 +1,6 @@
 # BlockyWL: A CodeBlock interface for the Wolfram Language
 
-BlockyWL is a project based on Scratch 3.0 to teach kids Functional Programming using Wolfram Language, developed as a POC during Wolfram Summer School 2019.
+BlockyWL is a project based on Scratch 3.0 to teach kids Functional Programming using Wolfram Language, developed as a POC during Wolfram Summer School 2019. a further description of the development can be found in https://community.wolfram.com/groups/-/m/t/1729082
 
 ![BlockyWL](readme_assets/blockywl.png)
 
