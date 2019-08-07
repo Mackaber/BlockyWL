@@ -1,36 +1,11 @@
+Import["functions.wl"]
+Import["challenges.wl"]
+
 If[
   Not[ValueQ[$Session] && ValueQ[$Id]],
   $Session = <||>;
   $Id = 1;
 ]
-
-(* ---------FUNCTIONS------- *)
-
-FaceEars[image_, ear_] :=
-    Block[{corners =
-        PolygonCoordinates[
-          CanonicalizePolygon[
-            FindFaces[image][[1]]]] // {#[[2]], #[[4]]} &},
-      ImageCompose[image, ear, corners[[1]] + {-10, 0}] //
-          ImageCompose[#, ImageReflect[ear, Left],
-            corners[[2]] + {+10, 0}] &];
-
-DrawInside[el_, list_] :=
-    With[{pos = PixelValuePositions[Rasterize@el, 0]},
-      Graphics@MapThread[Text, {list[[;; (pos // Length)]], pos}]];
-
-CheckAnswer[resp_, problem_] :=
-    With[{answers = <|
-        ButterflyString :>
-            SameQ[resp,
-              "Pneumonoultramicroscopicsilicovolcanoconiosissisoinoconaclovo\
-ciliscipocsorcimartluonomuenP"],
-        MostCommonLetters :>
-            SameQ[Sort[resp], {"d", "e", "g", "s", "y"}]|>},
-      If[answers[problem], Style["Correct!", Green, 20],
-        Style["Wrong!", Red, 20]]];
-
-(* ------------------------- *)
 
 StoreResult[id_, expr_] :=
     $Session[id] = expr;
