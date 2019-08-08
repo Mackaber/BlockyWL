@@ -22,6 +22,8 @@ Open a Command Prompt or Terminal in the repository and run:
     npm start
 ```
 
+The server in the default configuration should be running at http://127.0.0.1:8601/
+
 # Add Functions
 
 BlockyWL can perform any function from WL that produces a static visual output, like a text, an image, a plot, etc.
