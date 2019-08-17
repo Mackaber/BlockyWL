@@ -13,6 +13,10 @@ To setup the development environment:
     git clone --recurse-submodules git@github.com:Mackaber/BlockyWL.git
     cd BlockyWL
     npm install
+    
+```
+
+Then you need to install the Dependencies of scratch-vm
 ```
 
 # Running the Development server 
